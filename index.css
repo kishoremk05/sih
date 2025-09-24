@@ -1,0 +1,80 @@
+/* Responsive custom styles for Elephant Movement Detection Dashboard */
+
+/* Ensure main containers use full width on mobile */
+body, html, #root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Utility for hiding scrollbars on overflow-x-auto */
+.overflow-x-auto::-webkit-scrollbar {
+  display: none;
+}
+.overflow-x-auto {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Responsive tweaks for tables */
+table {
+  min-width: 600px;
+}
+@media (max-width: 640px) {
+  table {
+    min-width: 400px;
+    font-size: 0.9rem;
+  }
+  th, td {
+    padding: 0.5rem !important;
+  }
+}
+
+/* Responsive grid for dashboard cards */
+@media (max-width: 1024px) {
+  .lg\:col-span-2, .lg\:col-span-1 {
+    grid-column: span 1 / span 1 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .md\:grid-cols-2, .md\:col-span-2 {
+    grid-template-columns: 1fr !important;
+    grid-column: span 1 / span 1 !important;
+  }
+  .xl\:grid-cols-3 {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Responsive modal and map containers */
+@media (max-width: 600px) {
+  .max-w-md, .max-w-4xl {
+    max-width: 98vw !important;
+    padding: 1rem !important;
+  }
+  .min-h-\[200px\], .min-h-\[300px\] {
+    min-height: 120px !important;
+  }
+}
+
+/* Responsive font sizes for headings */
+h1, h2, h3, h4 {
+  word-break: break-word;
+}
+
+/* Ensure sidebar overlays content on mobile */
+@media (max-width: 1024px) {
+  aside[role="complementary"], aside {
+    position: fixed !important;
+    width: 80vw !important;
+    max-width: 320px;
+    min-width: 180px;
+    z-index: 40;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background: #161B22;
+    border-right: 1px solid #30363D;
+    transition: transform 0.3s;
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "name": "Elephant Movement Detection Dashboard",
+  "description": "A real-time dashboard to monitor elephant movements, receive alerts, and analyze data from tracking devices. Built with React, Tailwind CSS, and Leaflet.js.",
+  "requestFramePermissions": []
+}

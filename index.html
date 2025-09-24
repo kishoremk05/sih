@@ -2,7 +2,8 @@
 <html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <!-- Use relative favicon path so GitHub Pages base path is applied -->
+  <link rel="icon" type="image/svg+xml" href="vite.svg" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
@@ -59,6 +60,7 @@
   </head>
   <body class="bg-dark-bg text-gray-200 font-sans">
     <div id="root"></div>
-    <!-- Vite entry: this is required so Vite processes and bundles your app (it will inject correct asset links during build) -->
+    <!-- Vite entry: this is required so Vite processes and bundles your app (it will inject correct asset links during build) -->
+    <!-- Use relative path so GitHub Pages base (/sih/) is respected; absolute leading slash broke asset loading -->
   </body>
 </html>
